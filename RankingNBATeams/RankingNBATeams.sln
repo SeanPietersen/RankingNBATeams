@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.32106.194
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankingNBATeams.Test", "RankingNBATeams.Test\RankingNBATeams.Test.csproj", "{04B6C3D5-26BB-4A2F-9E5E-692B21B01E3C}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RankingNBATeams.App", "RankingNBATeams.App\RankingNBATeams.App.csproj", "{3C6791FF-A5FA-4AE9-94CB-0828A54F1CC1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{04B6C3D5-26BB-4A2F-9E5E-692B21B01E3C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{04B6C3D5-26BB-4A2F-9E5E-692B21B01E3C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{04B6C3D5-26BB-4A2F-9E5E-692B21B01E3C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{04B6C3D5-26BB-4A2F-9E5E-692B21B01E3C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3C6791FF-A5FA-4AE9-94CB-0828A54F1CC1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3C6791FF-A5FA-4AE9-94CB-0828A54F1CC1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3C6791FF-A5FA-4AE9-94CB-0828A54F1CC1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3C6791FF-A5FA-4AE9-94CB-0828A54F1CC1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {215D33F5-87BE-4E86-AC39-3B8496310809}
+	EndGlobalSection
+EndGlobal
