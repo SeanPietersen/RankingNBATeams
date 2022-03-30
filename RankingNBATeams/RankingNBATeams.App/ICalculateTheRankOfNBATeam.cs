@@ -1,12 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace RankingNBATeams.App
+﻿namespace RankingNBATeams.App
 {
     public interface ICalculateTheRankOfNBATeam
     {
+        string NbaCup(string resultSheet, string toFind);
     }
 }

@@ -19,4 +19,8 @@
     </PackageReference>
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\RankingNBATeams.App\RankingNBATeams.App.csproj" />
+  </ItemGroup>
+
 </Project>

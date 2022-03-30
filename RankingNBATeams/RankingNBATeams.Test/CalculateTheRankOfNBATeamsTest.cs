@@ -23,6 +23,8 @@ namespace RankingNBATeams.Test
                 + "Los Angeles Clippers 130 Golden State Warriors 95,Utah Jazz 102 Oklahoma City Thunder 113,San Antonio Spurs 84 Phoenix Suns 104,"
                 + "Chicago Bulls 103 Indiana Pacers 94,Milwaukee Bucks 106 Minnesota Timberwolves 88,Los Angeles Lakers 104 Portland Trail Blazers 102,"
                 + "Houston Rockets 120 New Orleans Pelicans 100,Boston Celtics 111 Brooklyn Nets 105,Charlotte Hornets 94 Chicago Bulls 86,Cleveland Cavaliers 103 Dallas Mavericks 97";
+
+
         
         static string teams = "Los Angeles Clippers,Dallas Mavericks,New York Knicks,NYK,Atlanta Hawks,Indiana Pacers,Memphis Grizzlies,"
                 + "Los Angeles Lakers,Minnesota Timberwolves,Phoenix Suns,Portland Trail Blazers,New Orleans Pelicans,"
@@ -30,6 +32,10 @@ namespace RankingNBATeams.Test
                 + "Oklahoma City Thunder,San Antonio Spurs,Boston Celtics,Philadelphia 76ers,Brooklyn Nets,Chicago Bulls,"
                 + "Detroit Pistons,Utah Jazz,Miami Heat,Charlotte Hornets,Toronto Raptors,Orlando Magic,Washington Wizards,"
                 + "Golden State Warriors,Dallas Maver";
+
+        static string resultSheet4 = "Boston Celtics 112 Philadelphia 76ers 95.2,Brooklyn Nets 100 Chicago Bulls 115,Detroit Pistons 92 Utah Jazz 87,Miami Heat 104 Charlotte Hornets 94,"
+            + "Toronto Raptors 106 Indiana Pacers 99,Orlando Magic 87 Washington Wizards 88,Golden State Warriors 111 New Orleans Pelicans 95,"
+            + "Atlanta Hawks 94 Detroit Pistons 106,Chicago Bulls 97 Cleveland Cavaliers 95";
 
         static string resultSheet3 = resultSheet1 + resultSheet2;
         
@@ -40,7 +46,7 @@ namespace RankingNBATeams.Test
             ICalculateTheRankOfNBATeam calculateTheRankOfNBATeam = new CalculateTheRankOfNBATeam();
 
             //Act
-            var test1 = calculateTheRankOfNBATeam.NBACup(resultSheet3, "Boston Celtics");
+            var test1 = calculateTheRankOfNBATeam.NbaCup(resultSheet3, "Boston Celtics");
 
             //Assert
             testCheck(test1, "Boston Celtics:W=4;D=0;L=0;Scored=403;Conceded=350;Points=12");
@@ -54,12 +60,40 @@ namespace RankingNBATeams.Test
             ICalculateTheRankOfNBATeam calculateTheRankOfNBATeam = new CalculateTheRankOfNBATeam();
 
             //Act
-            var test2 = calculateTheRankOfNBATeam.NBACup(resultSheet3, "Boston Celt");
+            var test2 = calculateTheRankOfNBATeam.NbaCup(resultSheet4, "Boston Celtics");
 
             //Assert
-            testCheck(test2, "Boston Celt:This team didn't play!");
+            testCheck(test2, "Error(float number):Boston Celtics 112 Philadelphia 76ers 95.2");
 
         }
+
+        [Fact]
+        public void NBACupTest3()
+        {
+            //Arrange
+            ICalculateTheRankOfNBATeam calculateTheRankOfNBATeam = new CalculateTheRankOfNBATeam();
+
+            //Act
+            var test3 = calculateTheRankOfNBATeam.NbaCup(resultSheet3, "Boston Celt");
+
+            //Assert
+            testCheck(test3, "Boston Celt:This team didn't play!");
+
+        }
+
+        [Fact]
+        public void NBACupTest5()
+        {
+            //Arrange
+            ICalculateTheRankOfNBATeam calculateTheRankOfNBATeam = new CalculateTheRankOfNBATeam();
+
+            //Act
+            var test5 = calculateTheRankOfNBATeam.NbaCup(resultSheet3, "Los Angeles Clippers");
+
+            //Assert
+            testCheck(test5, "Los Angeles Clippers:W=4;D=0;L=0;Scored=460;Conceded=396;Points=12");
+
+        } 
 
         private void testCheck(string actual, string expected)
         {
